@@ -23,14 +23,5 @@ echo "Service Down" | mail -s "$web service is down, restart the service !" seko
 tail -f /var/log/mail.log
 fi
 
-# web server check
-if (( $(ps -ef | grep -v grep | grep $web | wc -l) < 1))
-then
-echo "$currDate, $web service is down." >> /home/ubuntu/log.txt
-echo "================================================"
-echo "$web service is down, restart the service !"
-echo "================================================"
-fi
-
 sleep 300;
 done
