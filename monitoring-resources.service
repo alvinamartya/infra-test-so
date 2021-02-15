@@ -1,0 +1,9 @@
+[Unit]
+Description=Monitoring Performances
+
+[Service]
+ExecStart=/usr/local/bin/monitoring-resources.sh
+
+[Install]
+WantedBy=multi-user.target
+Alias=monitoring-resources.service
