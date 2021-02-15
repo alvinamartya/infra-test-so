@@ -11,5 +11,5 @@ if [ $diskPercent -ge $limit ]
 then
 echo "Disk Usage : $diskPercent%"
 echo "Disk Usage" | mail -s "Disk Usage more than 80%" sekolah.anakb@gmail.com
-tail -f /var/log/mail.log
+. /script-send-mail.sh
 fi

@@ -10,5 +10,5 @@ if [ $cpuPercent -ge $limit ]
 then
 echo "CPU Usage : $cpuPercent%"
 echo "CPU Usage" | mail -s "CPU Usage more than 80%" sekolah.anakb@gmail.com
-tail -f /var/log/mail.log
+. /script-send-mail.sh
 fi
