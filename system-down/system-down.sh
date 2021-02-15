@@ -13,14 +13,14 @@ if [ $dbStatus -lt 1 ]
 then
 echo "$currDate, $db service is down." >> /home/kelompok9/log.txt
 echo "Service Down" | mail -s "$db service is down, restart the service !" sekolah.anakb@gmail.com
-tail -f /var/log/mail.log
+. /script-send-mail.sh
 fi
 
 if [ $webStatus -lt 1 ]
 then
 echo "$currDate, $web service is down." >> /home/kelompok9/log.txt
 echo "Service Down" | mail -s "$web service is down, restart the service !" sekolah.anakb@gmail.com
-tail -f /var/log/mail.log
+. /script-send-mail.sh
 fi
 
 sleep 300;
