@@ -1,0 +1,9 @@
+[Unit]
+Description=Monitoring services
+
+[Service]
+ExecStart=/usr/local/bin/system-down.sh
+
+[Install]
+WantedBy=multi-user.target
+Alias=system-down.service

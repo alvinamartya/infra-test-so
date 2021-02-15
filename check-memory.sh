@@ -11,5 +11,6 @@ if [ $memPercent -ge $limit ]
 then
 echo "<------- MemUse ------->"
 echo "Memory usage is $memPercent%"
-echo "Memory usage more than 80% !"
+echo "Memory Usage" | mail -s "Memory Usage more than 80%" sekolah.anakb@gmail.com
+tail -f /var/log/mail.log
 fi
